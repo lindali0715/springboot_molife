@@ -1,0 +1,27 @@
+# 獲得所有文章檢舉
+GET http://localhost:8080/forumReport
+Content-Type: application/json
+
+###
+
+# 獲得一筆文章檢舉
+GET http://localhost:8080/forumReport/{forumArticleReportNo}
+Content-Type: application/json
+
+###
+
+# 新增一筆文章檢舉
+POST http://localhost:8080/forumReport
+Content-Type: application/json
+
+###
+
+# 修改一筆文章檢舉
+PUT http://localhost:8080/forumReport/{forumArticleReportNo}
+Content-Type: application/json
+
+###
+
+# 刪除一筆文章檢舉
+DELETE http://localhost:8080/forumReport/{forumArticleReportNo}
+Content-Type: application/json

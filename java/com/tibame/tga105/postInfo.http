@@ -1,0 +1,27 @@
+# 獲得所有通知信
+GET http://localhost:8080/postInfo
+Content-Type: application/json
+
+###
+
+# 獲得一筆通知信
+GET http://localhost:8080/postInfo/{infoId}
+Content-Type: application/json
+
+###
+
+# 新增一筆通知信
+POST http://localhost:8080/postInfo
+Content-Type: application/json
+
+###
+
+# 修改一筆通知信
+PUT http://localhost:8080/postInfo/{infoId}
+Content-Type: application/json
+
+###
+
+# 刪除一筆通知信
+DELETE http://localhost:8080/postInfo/{infoId}
+Content-Type: application/json

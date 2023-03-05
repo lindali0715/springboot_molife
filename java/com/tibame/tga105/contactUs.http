@@ -1,0 +1,27 @@
+# 獲得所有聯絡我們
+GET http://localhost:8080/contactUs
+Content-Type: application/json
+
+###
+
+# 獲得一筆聯絡我們
+GET http://localhost:8080/contactUs/{msgId}
+Content-Type: application/json
+
+###
+
+# 新增一筆聯絡我們
+POST http://localhost:8080/contactUs
+Content-Type: application/json
+
+###
+
+# 修改一筆聯絡我們
+PUT http://localhost:8080/contactUs/{msgId}
+Content-Type: application/json
+
+###
+
+# 刪除一筆聯絡我們
+DELETE http://localhost:8080/contactUs/{msgId}
+Content-Type: application/json
