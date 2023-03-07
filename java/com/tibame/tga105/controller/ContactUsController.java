@@ -49,10 +49,28 @@ public class ContactUsController {
         return "24contact";
     }
 
-    //後台回覆留言表單
+   //後台回覆留言表單並傳送通知信給會員
     @PostMapping("/replyMsg")
     public String updateMsg(ContactUs contactUs){
         contactUsService.updateById(contactUs.getMsgId(),contactUs);
+        if(contactUs.getMemberId() == null){
+            SimpleMailMessage message = new SimpleMailMessage();
+            message.setFrom("lindali0715a@gmail.com");
+            message.setTo(contactUs.getEmail());
+            message.setSubject("MoLife: 聯絡我們表單回覆");
+            message.setText(contactUs.getResponse());
+            javaMailSender.send(message);
+        }else {
+            PostInfo postInfo = new PostInfo();
+            postInfo.setMemberId(contactUs.getMemberId());
+            postInfo.setAdminId(1);
+            postInfo.setInfoTitle("聯絡我們");
+            postInfo.setContent(contactUs.getResponse());
+            postInfo.setInfoDate(new Date());
+            postInfo.setInfoStatus(0);
+            postInfo.setInfoType(5);
+            postInfoService.createInfo(postInfo);
+        }
         return "redirect:/24admin.chatroom.html";
     }
 
