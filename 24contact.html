@@ -23,63 +23,64 @@
     />
 
     <link
-      href="plugins/font-awesome-4.7.0/css/font-awesome.min.css"
-      th:href="@{plugins/font-awesome-4.7.0/css/font-awesome.min.css}"
+      href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css"
+      th:href="@{/plugins/font-awesome-4.7.0/css/font-awesome.min.css}"
       rel="stylesheet"
       type="text/css"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      th:href="@{plugins/OwlCarousel2-2.2.1/owl.carousel.css}"
-      href="plugins/OwlCarousel2-2.2.1/owl.carousel.css"
+      th:href="@{/plugins/OwlCarousel2-2.2.1/owl.carousel.css}"
+      href="../../plugins/OwlCarousel2-2.2.1/owl.carousel.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      th:href="@{plugins/OwlCarousel2-2.2.1/owl.theme.default.css}"
-      href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css"
+      th:href="@{/plugins/OwlCarousel2-2.2.1/owl.theme.default.css}"
+      href="../../plugins/OwlCarousel2-2.2.1/owl.theme.default.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      th:href="@{plugins/OwlCarousel2-2.2.1/animate.css}"
-      href="plugins/OwlCarousel2-2.2.1/animate.css"
+      th:href="@{/plugins/OwlCarousel2-2.2.1/animate.css}"
+      href="../../plugins/OwlCarousel2-2.2.1/animate.css"
     />
     <link
       rel="stylesheet"
-      th:href="@{plugins/themify-icons/themify-icons.css}"
-      href="plugins/themify-icons/themify-icons.css"
+      th:href="@{/plugins/themify-icons/themify-icons.css}"
+      href="../../plugins/themify-icons/themify-icons.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      th:href="@{plugins/jquery-ui-1.12.1.custom/jquery-ui.css}"
-      href="plugins/jquery-ui-1.12.1.custom/jquery-ui.css"
+      th:href="@{/plugins/jquery-ui-1.12.1.custom/jquery-ui.css}"
+      href="../../plugins/jquery-ui-1.12.1.custom/jquery-ui.css"
+    />
+
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      th:href="@{/styles/contact_styles.css}"
+      href="../../styles/contact_styles.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      th:href="@{/styles/contact_responsive.css}"
+      href="../../styles/contact_responsive.css"
     />
 
     <link
       rel="stylesheet"
       type="text/css"
-      th:href="@{styles/main_styles.css}"
-      href="styles/main_styles.css"
+      th:href="@{/styles/main_styles.css}"
+      href="../../styles/main_styles.css"
     />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      th:href="@{styles/contact_styles.css}"
-      href="styles/contact_styles.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      th:href="@{styles/contact_responsive.css}"
-      href="styles/contact_responsive.css"
-    />
-
-    <link rel="stylesheet" th:href="@{styles/room/room.css}" href="styles/room/room.css" />
-
+    
+    <link rel="stylesheet" th:href="@{/styles/room/room.css}" href="../../styles/room/room.css" />
+    
     <script
       src="https://kit.fontawesome.com/2672c0b72c.js"
       th:src="@{https://kit.fontawesome.com/2672c0b72c.js}"
@@ -103,7 +104,7 @@
 
           // 透過 Ajax 將表單數據提交到後端
           $.ajax({
-            url: 'http://localhost:8080/contactUs',
+            url: '/page/others/addMsg',
             type: 'POST',
             data: JSON.stringify(formData),
             dataType: 'json',
@@ -120,9 +121,57 @@
         });
       });
     </script>
+    
+    <style type="text/css">
+      .navbar ul li a:hover{
+         color:#fe4c50;
+      }
+    </style>
+    
   </head>
   <body>
-    <div id="header"></div>
+
+   <!-- Header -->
+      <header class="header trans_300">
+        <!-- Main Navigation -->
+        <div class="main_nav_container bg-yellow">
+          <div>
+            <div class="row">
+              <div class="col-lg-12 text-right">
+                <div class="logo_container">
+                  <a href="24front_page.html">
+                    <img src="../../images/home/logoMoLife.png" />
+                  </a>
+                </div>
+                <nav class="navbar">
+                  <ul class="navbar_menu">
+                    <li><a href="../room/01room.index.html">寵物旅館</a></li>
+                    <li><a href="../shop/shop.html">商品專區</a></li>
+                    <li><a href="/pages/donate/N_1_index.jsp">寵物募款</a></li>
+                    <li><a href="24forum.index.html">寵物論壇</a></li>
+                    <li><a href="24contact.html">聯絡我們</a></li>
+                    <li><a href="24admin.index.html">管理員後台</a></li>
+                  </ul>
+                  <ul class="navbar_user">
+                    <a href="../shop/shop-cart.html"
+                      ><img class="icon" src="../../images/home/car.png"
+                    /></a>
+                    <a href="24post_info.html"
+                      ><img class="icon" src="../../images/home/ring.png"
+                    /></a>
+                    <a href="#"
+                      ><img class="icon" src="../../images/home/man.png"
+                    /></a>
+                  </ul>
+                  <div class="hamburger_container">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
     <!-- content -->
     <div class="container contact_container">
@@ -134,7 +183,7 @@
             <ul>
               <li><a href="24front_page.html">首頁</a></li>
               <li class="active">
-                <a href="./24contact.html"
+                <a href="24contact.html"
                   ><i class="fa fa-angle-right" aria-hidden="true"></i
                   >聯絡我們</a
                 >
@@ -149,11 +198,11 @@
       <div class="row">
         <div class="col">
           <div id="google_map">
-            <div class="map_container" style="height: 700px">
+            <div class="map_container" style="height: 700px;">
               <div id="map">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4676870452995!2d121.54106421400304!3d25.052132843720486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe6b0446815%3A0xf006dde8c27afcc7!2z57ev6IKyVGliYU1l6ZmE6Kit5Y-w5YyX6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1675851960218!5m2!1szh-TW!2stw"
-                  width="1110"
+                  width="1400"
                   height="700"
                   style="border: 0"
                   allowfullscreen=""
@@ -237,7 +286,7 @@
             <p style="color: #646e78; font-size: 20px">
               我們會盡快回覆您 謝謝!
             </p>
-            <form method="POST" id="formMsg" action="/contactUs">
+            <form method="post" id="formMsg" action="/page/others/addMsg">
               <div>
                 <input
                   id="input_name"
@@ -293,30 +342,87 @@
         </div>
       </div>
     </div>
+    
+    <!-- Footer -->
+      <div class="row my-5"></div>
 
-    <div id="footer" style="margin-top: 200px"></div>
+      <footer class="bg-yellow" style="margin-top:200px;">
+        <div class="row">
+          <div class="col-lg-5">
+            <div
+              class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
+              <div class="container">
+                <ul class="footer_nav">
+                  <li><a href="#">討論區</a></li>
+                  <li><a href="24faq.html">FAQs</a></li>
+                  <li><a href="24contact.html">聯絡我們</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div
+              class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-facebook" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-twitter" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-pinterest" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    <script th:src="@{js/jquery-3.2.1.min.js}" src="js/jquery-3.2.1.min.js"></script>
-    <script th:src="@{styles/bootstrap4/popper.js}" src="styles/bootstrap4/popper.js"></script>
-    <script th:src="@{plugins/Isotope/isotope.pkgd.min.js}" src="plugins/Isotope/isotope.pkgd.min.js"></script>
-    <script th:src="@{plugins/OwlCarousel2-2.2.1/owl.carousel.js}" src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script th:src="@{plugins/easing/easing.js}" src="plugins/easing/easing.js"></script>
-    <script th:src="@{plugins/jquery-ui-1.12.1.custom/jquery-ui.js}" src="plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-    <script th:src="@{js/contact_custom.js}" src="js/contact_custom.js"></script>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="footer_nav_container">
+              <div class="container">
+                <div class="cr">
+                  ©2022 All Rights Reserverd. Made with
+                  <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                  <a href="#">Colorlib</a> &amp; distributed by
+                  <a href="24front_page.html"
+                    >Tibame TGA-105 第四組</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script th:src="@{/js/jquery-3.2.1.min.js}" src="../../js/jquery-3.2.1.min.js"></script>
+    <script th:src="@{/styles/bootstrap4/popper.js}" src="../../styles/bootstrap4/popper.js"></script>
+    <script th:src="@{/plugins/Isotope/isotope.pkgd.min.js}" src="../../plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script th:src="@{/plugins/OwlCarousel2-2.2.1/owl.carousel.js}" src="../../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script th:src="@{/plugins/easing/easing.js}" src="../../plugins/easing/easing.js"></script>
+    <script th:src="@{/plugins/jquery-ui-1.12.1.custom/jquery-ui.js}" src="../../plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script th:src="@{/js/contact_custom.js}" src="../../js/contact_custom.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
       th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js}"
       integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
       crossorigin="anonymous"
     ></script>
-
-    <!-- 引入 header / footer /scrollTop-->
-    <script>
-      $(function () {
-        $("#header").load("header.html");
-        $("#footer").load("footer.html");
-      });
-    </script>
 
     <script th:src="@{https://unpkg.com/aos@2.3.1/dist/aos.js}" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
